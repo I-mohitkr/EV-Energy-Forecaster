@@ -235,7 +235,7 @@ if prompt := st.chat_input("Ask a general question or for a prediction...", disa
                 groq_messages.append({"role": msg["role"], "content": msg["content"]})
             
             response = groq_client.chat.completions.create(
-                model="llama3-8b-8192",
+                model="llama-3.1-8b-instant",
                 messages=groq_messages,
                 tools=[predict_energy_tool],
                 tool_choice="auto",
